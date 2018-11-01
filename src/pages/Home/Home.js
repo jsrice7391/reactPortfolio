@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {Grid, Row, Col, Button, FormControl} from "react-bootstrap";
 import {SampleComp} from "../../components/SampleComp";
-import {NavMaster} from "../../components/NavMaster";
+import {NavMaster, Hero} from "../../components/NavMaster";
 import { pbkdf2Sync } from "crypto";
 
 const pStyle = {
@@ -22,8 +22,11 @@ class All extends Component {
     return(
       <div>
       <NavMaster/>
-        <img src="https://s3.us-east-2.amazonaws.com/friend-finder333/markus-spiske-445253-unsplash.jpg" style={pStyle}/>
+      <Hero>
+
+      </Hero>
       </div>
+
 
     )
   }

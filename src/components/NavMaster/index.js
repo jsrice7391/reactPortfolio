@@ -1,1 +1,1 @@
-export {NavMaster} from "./NavMaster";
+export {NavMaster, Hero} from "./NavMaster";

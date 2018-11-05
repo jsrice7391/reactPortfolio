@@ -1,13 +1,26 @@
 import axios from "axios";
 
+var config = {
+  headers: {
+    'Authorization': "bearer " + "f555d2548bf8d56b23dec011dc434b63917cff52"
+  }
+};
+
 export default {
   // Gets all items
-  getitems: function() {
-    return axios.get("/api/items");
+  getArticles: function() {
+    axios.get(
+      "https: //api.medium.com/v1/users/jsrice7391/publications",
+      config
+    ).then((response) => {
+      console.log(response)
+    }).catch((error) => {
+      console.log(error)
+    });
   },
   // Gets the Item with the given id
-  getItem: function(id) {
-    return axios.get("/api/items/" + id);
+  getRepos: function(id) {
+    return axios.get("https://api.github.com/users/jsrice7391/repos?sort=updated&directon=ascending");
   },
   // Deletes the Item with the given id
   deleteItem: function(id) {

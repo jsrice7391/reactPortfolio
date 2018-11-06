@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import {Grid, Row, Col} from "react-bootstrap";
+import {Grid, Row} from "react-bootstrap";
 import {SampleComp} from "../../components/SampleComp";
 import {NavMaster, Hero} from "../../components/NavMaster";
 import { pbkdf2Sync } from "crypto";
 import API from "../../utils/API"
-import {Card} from "react-materialize";
+import {Card, Col} from "react-materialize";
 
 
 
@@ -42,11 +42,13 @@ class All extends Component {
       <Grid>
         <Row className="show-grid">
       {this.state.repos.slice(0,3).map((row, index) => (
-        <Col sm={2} md={3}>
-    <Card className='blue-grey darken-1' textClassName='white-text' title={row.name} actions={[<a href={row.svn_url}>This is a link</a>]}>
-    {row.description}
+        <Col s={6} m={6} l={4} key={index}>
+    <Card key={index} className='blue-grey darken-1' textClassName='white-text' title={row.name} actions={[<a href={row.svn_url}>This is a link</a>]}>
+      <div key={index}>
+        {row.description}
+      </div>
     </Card>
-</Col>
+    </Col>
       ))}
       </Row>
       </Grid>

@@ -2,7 +2,7 @@ import axios from "axios";
 
 var config = {
   headers: {
-    'Authorization': "bearer " + "f555d2548bf8d56b23dec011dc434b63917cff52"
+    'Authorization': "Token " + "f555d2548bf8d56b23dec011dc434b63917cff52"
   }
 };
 
@@ -10,7 +10,7 @@ export default {
   // Gets all items
   getArticles: function() {
     axios.get(
-      "https: //api.medium.com/v1/users/jsrice7391/publications",
+      "https://api.medium.com/v1/users/jsrice7391/publications",
       config
     ).then((response) => {
       console.log(response)

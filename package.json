@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "gh-pages": "^2.0.1",
     "react": "^16.6.0",
     "react-bootstrap": "^0.32.4",
     "react-document-title": "^2.0.3",

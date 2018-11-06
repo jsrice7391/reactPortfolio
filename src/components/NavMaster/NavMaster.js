@@ -9,8 +9,6 @@ export const NavMaster = () => (
     </Navbar>
 )
 
-
-
 export const Hero = () => (
     <div className={styles.hero}>
         <h1>Hi my name is justin</h1> 
